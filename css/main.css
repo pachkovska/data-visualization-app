@@ -1,0 +1,70 @@
+:root {
+    --barGraph1-color: #6c7b95;
+    --barGraph2-color: #c7f0db;
+}
+
+body {
+    margin: 30px;
+    font-family: 'Montserrat', sans-serif;
+    color: #47515b;
+}
+
+.Container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.ChartAreaContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 5px;
+}
+
+.Graph1, .Graph2, .barLabels {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, 1fr);
+    row-gap: 10px;
+}
+
+.Graph1 {
+    align-items: end;
+}
+
+.Graph2 {
+    align-items: start;
+}
+
+.Graph1 > div:not(.ChartAreaContainer-leftLabel) {
+    background-color: var(--barGraph1-color);
+    border: 1px solid var(--barGraph1-color);
+    box-sizing: border-box;
+    height: 30px;
+    justify-self: end;
+}
+
+.Graph2 > div:not(.ChartAreaContainer-rightLabel) {
+    background-color: var(--barGraph2-color);
+    border: 1px solid var(--barGraph2-color);
+    box-sizing: border-box;
+    height: 30px;
+}
+
+.barLabels > div {
+    align-self: center;
+    margin: 3px;
+}
+
+.ChartAreaContainer-leftLabel {
+    align-self: flex-end;
+}
+
+.ChartAreaContainer-rightLabel {
+    align-self: flex-end;
+    justify-self: self-end;
+}
+
