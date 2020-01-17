@@ -28,12 +28,59 @@ body {
     flex-wrap: wrap;
     border-bottom: 1px solid lightgray;
     border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
     padding-bottom: 10px;
     width: 700px;
     justify-content: center;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.GraphTicks {
+    bottom: -100px;
+}
+
+.Tick {
+    height: 10px;
+    position: absolute;
+    bottom: -10px;
+    font-size: 10px;
+    border-left: lightgray 1px solid;
+}
+
+.Tick:nth-child(1)  {
+    left: 0px;
+}
+
+.Tick:nth-child(2)  {
+    left: 115px;
+}
+
+.Tick:nth-child(3)  {
+    left: 230px;
+}
+
+.Tick:nth-child(4)  {
+    left: 347px;
+}
+
+.Tick:nth-child(5)  {
+    left: 465px;
+}
+
+.Tick:nth-child(6)  {
+    left: 580px;
+}
+
+.Tick:nth-child(7)  {
+    left: 700px;
+}
+
+.Tick > span {
+    position:relative;
+    bottom: -10px;
+    left: -7px;
 }
 
 .Graph1, .Graph2, .barLabels {
@@ -45,6 +92,7 @@ body {
 
 .Graph1 {
     align-items: end;
+    width: 300px;
 }
 
 .Graph2 {
